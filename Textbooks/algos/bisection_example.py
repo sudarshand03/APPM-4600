@@ -1,5 +1,5 @@
 import numpy as np
-from types import Callable, Tuple
+from typing import Callable, Tuple
 
 
 class Bisection:
