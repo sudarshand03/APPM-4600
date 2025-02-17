@@ -3,9 +3,20 @@ import numpy as np
 def driver():
 
 # use routines    
-    f = lambda x: np.sin(x)
-    a = 0.5
-    b = (3*np.pi)/4
+    f = lambda x: (
+        x**9
+        - 45*x**8
+        + 900*x**7
+        - 10500*x**6
+        + 78750*x**5
+        - 390625*x**4
+        + 1312500*x**3
+        - 2812500*x**2
+        + 3515625*x
+        - 1953125
+    )
+    a = 4.82
+    b = 5.2
     tol = 1e-5
 
     [astar,ier] = bisection(f,a,b,tol)
