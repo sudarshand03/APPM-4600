@@ -16,7 +16,7 @@ class Bisection:
         param tolerance: max error bound for convergence
         """
 
-        self.f: Callable[[float], float] = func
+        self.func: Callable[[float], float] = func
         self.lower: float = lower
         self.upper: float = upper
         self.tolerance: float = tolerance
@@ -48,8 +48,8 @@ class Bisection:
         tol = self.tolerance
 
         # evaluate the function at the endpoints
-        f_lower = self.f(lower)
-        f_upper = self.f(upper)
+        f_lower = self.func(lower)
+        f_upper = self.func(upper)
 
         # Check if IVT holds
         if f_lower * f_upper > 0:
