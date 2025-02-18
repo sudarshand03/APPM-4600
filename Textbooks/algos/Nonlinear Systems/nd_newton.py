@@ -13,7 +13,8 @@ class system_newton:
         inital_guess: Union[List[float], ndarray],
         tolerance: float = 1e-10,
         max_iter: int = 100
-    ) -> None:
+        ) -> None:
+        
         self.system: Callable[[ndarray], ndarray] = system
         self.jacobian: Callable[[ndarray], ndarray] = jacobian
         self.tolerance: float = tolerance
@@ -136,3 +137,6 @@ class system_newton:
                 return (current_x, error_flag, iteration)
 
         return (current_x, error_flag, self.max_iter)
+    
+
+
