@@ -79,7 +79,7 @@ def Newton(x0,tol,Nmax):
     ier = 1
     return[xstar,ier,its]
            
-def LazyNewton(x0,tol,Nmax):
+def LazyNewton(x0,evalF, evalJ, tol,Nmax):
 
     ''' Lazy Newton = use only the inverse of the Jacobian for initial guess'''
     ''' inputs: x0 = initial guess, tol = tolerance, Nmax = max its'''
